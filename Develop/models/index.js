@@ -1,7 +1,9 @@
 const Category = require('./Category');
-const Product = require('./Product'); // Ensure this matches your table name
+const Product = require('./Product');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
+
+const sequelize = require('../config/connection');
 
 // Define associations
 Product.belongsTo(Category, {
@@ -28,4 +30,5 @@ module.exports = {
   Product,
   Tag,
   ProductTag,
+  sequelize,
 };
