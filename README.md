@@ -18,11 +18,11 @@ This project is the back end for an e-commerce website, built using Express.js a
    ```bash
    git clone https://github.com/austintylerallen/e-commerce-backend.git
    cd e-commerce-backend
-
+   ```
 2. Install Dependencies:
-    ```bash
+```bash
     npm install
-
+```
 3. Set up the environment variables:
 Create a .env file in the root of the project with the following content:
     ```bash
@@ -31,16 +31,18 @@ DB_USER=your_postgres_username
 DB_PASSWORD=your_postgres_password
 DB_HOST=localhost
 DB_PORT=5432
+      ```
 
 4. Create the database schema and seed the database:
 
-    ```bash
+```bash
 npm run seed
-
+```
 5. Start the server:
 
-    ```bash
+```bash
 npm start
+```
 
 ## Usage
 
