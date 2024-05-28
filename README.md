@@ -61,3 +61,8 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 ## Contact
 
 For any questions or feedback, please contact me at austintallen07@gmail.com
+
+## Acknowledgements
+
+- Thank you to my tutor for helping diagnose the problem.
+- Thank you to ChatGPT for providing guidance and support during challenging times.
