@@ -1,12 +1,16 @@
 const express = require('express');
-const routes = require('./routes'); // This should point to your routes folder
+const routes = require('./routes');
 const sequelize = require('./config/connection');
 
-// Create an instance of the Express app
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Middleware
+
+app.use((req, res, next) => {
+  console.log(`${req.method} request for '${req.url}'`);
+  next();
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -21,9 +25,4 @@ app.use((req, res) => {
 // Sync Sequelize models to the database, then start the server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
-});
-
-
-app.use((req, res, next) => {
-  res.status(404).send('Wrong Route!');
 });
